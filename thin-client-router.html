@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Thin-Client → OPNsense Router — Stensrud Engineering</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<div class="sheet-frame" aria-hidden="true"><span class="tl"></span><span class="tr"></span><span class="bl"></span><span class="br"></span></div>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="wordmark" href="../index.html">
+      <b>Stensrud Engineering</b>
+      <span class="sub">Mechanical · CAD · Hardware</span>
+    </a>
+    <nav class="links">
+      <a href="../work.html" class="active">Work</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+      <a class="rev" href="../index.html">Rev A</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap crumb">
+  <a href="../work.html">Work</a>
+  <span class="sep">/</span>
+  <span class="here">01 — Thin-Client → OPNsense Router</span>
+</div>
+
+<section>
+  <div class="wrap">
+    <article class="project reveal">
+      <div class="proj-top">
+        <div style="display:flex;gap:22px;align-items:flex-start;">
+          <div class="proj-no">01</div>
+          <div class="proj-titles">
+            <h1>Thin-Client → OPNsense Router</h1>
+            <div class="proj-tags">
+              <span class="tag">Hardware conversion</span>
+              <span class="tag">Enclosure design</span>
+              <span class="tag">3D printing</span>
+            </div>
+          </div>
+        </div>
+        <span class="proj-status">Built · Rev C</span>
+      </div>
+
+      <div class="proj-body">
+        <div>
+          <p class="lead">A decommissioned 10ZiG 6000q thin client rebuilt into a fanless home router running OPNsense with AdGuard Home. Adding a second network interface broke the stock rear port layout, so the rear I/O plate became its own design problem.</p>
+          <p>I modeled a replacement rear I/O plate in OpenSCAD and iterated it on the printer — the row of prototypes in the photos is the cutout geometry and mounting tabs being dialed in against caliper-measured dimensions until the ports seated cleanly. Internal storage was solved with an mSATA-to-adapter bodge carrying a KingSpec SSD, and the WAN interface came from an added M.2 A+E NIC alongside the board's onboard Intel controller.</p>
+          <p>The result is a silent, low-power router that looks intentional rather than hacked together — the enclosure closes flush with a part I designed to the tenth of a millimeter.</p>
+        </div>
+
+        <div class="spec">
+          <div class="cap">Title Block — Specification</div>
+          <dl>
+            <div class="row"><dt>Base Unit</dt><dd>10ZiG 6000q Thin Client</dd></div>
+            <div class="row"><dt>Board</dt><dd>S810-V1.2</dd></div>
+            <div class="row"><dt>Software</dt><dd>OPNsense + AdGuard Home</dd></div>
+            <div class="row"><dt>WAN NIC</dt><dd>RTL8111H (M.2 A+E)</dd></div>
+            <div class="row"><dt>LAN NIC</dt><dd>Intel I211</dd></div>
+            <div class="row"><dt>Storage</dt><dd>KingSpec mSATA SSD (adapter)</dd></div>
+            <div class="row"><dt>Enclosure</dt><dd>Custom rear I/O plate</dd></div>
+            <div class="row"><dt>Process</dt><dd>OpenSCAD · FDM · Bambu P1S</dd></div>
+            <div class="row"><dt>Metrology</dt><dd>Digital calipers</dd></div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="gallery">
+        <figure class="shot"><img src="../assets/img/IMG_4909.jpg" alt="10ZiG thin client opened on the workbench beside iterated I/O plate prototypes and digital calipers" loading="lazy"><figcaption><span>Fig 1 — Teardown + fitment check</span><span>IMG.01</span></figcaption></figure>
+        <figure class="shot"><img src="../assets/img/IMG_4912.jpg" alt="Row of 3D-printed rear I/O plate prototype revisions beside the assembled standing unit" loading="lazy"><figcaption><span>Fig 2 — I/O plate revisions</span><span>IMG.02</span></figcaption></figure>
+        <figure class="shot"><img src="../assets/img/IMG_4911.jpg" alt="Hand holding the original stainless I/O shield template above the assembled router's rear ports" loading="lazy"><figcaption><span>Fig 3 — Stock shield reference</span><span>IMG.03</span></figcaption></figure>
+        <figure class="shot"><img src="../assets/img/IMG_4831.jpg" alt="Internals showing the finned heatsink, mSATA SSD on adapter, and rewired cabling" loading="lazy"><figcaption><span>Fig 4 — Internals + storage bodge</span><span>IMG.04</span></figcaption></figure>
+      </div>
+
+      <div class="viewport-band">
+        <div class="viewport-grid">
+          <!-- 3D SLOT 1 — drop a model-viewer / Sketchfab / Spline embed here -->
+          <div class="viewport" role="img" aria-label="3D model viewport placeholder for the rear I/O plate">
+            <span class="vp-corner c1"></span><span class="vp-corner c2"></span><span class="vp-corner c3"></span>
+            <span class="vp-num">MODEL · 3D-01</span>
+            <div class="reticle"></div>
+            <div class="vp-title">Rear I/O Plate</div>
+            <div class="vp-sub">Embed the OpenSCAD export (.stl / .glb) here</div>
+            <div class="axis"><b>Z</b> ↑ &nbsp; <b>Y</b> ↗ &nbsp; <b>X</b> →</div>
+            <!--
+              FRAMER / WEB: replace this block's contents with a 3D embed. Example using
+              Google's model-viewer (add the script in <head>):
+              <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+              <model-viewer src="io-plate.glb" camera-controls auto-rotate
+                            style="width:100%;height:100%" exposure="1"></model-viewer>
+            -->
+          </div>
+          <!-- 3D SLOT 2 -->
+          <div class="viewport" role="img" aria-label="3D model viewport placeholder for the full assembly">
+            <span class="vp-corner c1"></span><span class="vp-corner c2"></span><span class="vp-corner c3"></span>
+            <span class="vp-num">MODEL · 3D-02</span>
+            <div class="reticle"></div>
+            <div class="vp-title">Full Assembly</div>
+            <div class="vp-sub">Embed the enclosure + board assembly here</div>
+            <div class="axis"><b>Z</b> ↑ &nbsp; <b>Y</b> ↗ &nbsp; <b>X</b> →</div>
+          </div>
+        </div>
+      </div>
+
+      <nav class="proj-pagenav">
+        <a class="prev" href="../work.html">
+          <span class="pn-label">← Back to</span>
+          <span class="pn-title">All Work</span>
+        </a>
+        <a class="next" href="../work.html#project-02">
+          <span class="pn-label">Next project →</span>
+          <span class="pn-title">Project 02</span>
+        </a>
+      </nav>
+    </article>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="padding-top:0;padding-bottom:0;">
+    <div class="titleblock">
+      <div class="tb big"><span class="k">Drawing Title</span><span class="v">Thin-Client Router</span></div>
+      <div class="tb"><span class="k">Drawn By</span><span class="v">C. Stensrud</span></div>
+      <div class="tb"><span class="k">Scale</span><span class="v">NTS</span></div>
+      <div class="tb"><span class="k">Sheet</span><span class="v">01 / 03</span></div>
+      <div class="tb"><span class="k">Rev</span><span class="v">C</span></div>
+    </div>
+    <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:16px 0;">
+      <span class="mono">© <span id="yr"></span> Stensrud Engineering</span>
+      <span class="mono"><a href="../index.html">Back to home</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

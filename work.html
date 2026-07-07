@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  ADDING A NEW PROJECT CARD
+    Copy one <a class="proj-card">...</a> block below, update the number,
+    title, description, tags, status, href, and the id="project-0N" anchor.
+    Order top to bottom is the order they'll appear.
+-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Work — Stensrud Engineering</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="sheet-frame" aria-hidden="true"><span class="tl"></span><span class="tr"></span><span class="bl"></span><span class="br"></span></div>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="wordmark" href="index.html">
+      <b>Stensrud Engineering</b>
+      <span class="sub">Mechanical · CAD · Hardware</span>
+    </a>
+    <nav class="links">
+      <a href="work.html" class="active">Work</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+      <a class="rev" href="index.html">Rev A</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero compact">
+  <div class="wrap">
+    <div class="eyebrow">
+      <span class="tag">Full Index</span>
+      <span class="mono">All Projects</span>
+    </div>
+    <h1 class="hero-name mid">Work</h1>
+    <p class="hero-lead" style="margin-top:22px;">Builds, teardowns, and things designed to fit — from enclosure conversions to parts modeled from a caliper reading up.</p>
+  </div>
+</div>
+
+<section class="tight">
+  <div class="wrap">
+    <div class="proj-list reveal">
+
+      <a class="proj-card" href="projects/thin-client-router.html" id="project-01">
+        <div class="card-no">01</div>
+        <div class="card-body">
+          <h3>Thin-Client → OPNsense Router</h3>
+          <p>A decommissioned 10ZiG 6000q thin client rebuilt into a fanless home router. Custom rear I/O plate modeled in OpenSCAD and iterated on the printer to fit an added WAN NIC and internal storage bodge.</p>
+          <div class="card-tags">
+            <span class="tag">Hardware conversion</span>
+            <span class="tag">Enclosure design</span>
+            <span class="tag">3D printing</span>
+          </div>
+        </div>
+        <div class="card-right">
+          <span class="card-status">Built · Rev C</span>
+          <span class="card-arrow">→</span>
+        </div>
+      </a>
+
+      <a class="proj-card" href="#" id="project-02">
+        <div class="card-no">02</div>
+        <div class="card-body">
+          <h3>Project Title Goes Here</h3>
+          <p>Drop this project's one-line summary here — what it is and what made it worth building.</p>
+          <div class="card-tags">
+            <span class="tag">Add tags</span>
+            <span class="tag">CAD</span>
+          </div>
+        </div>
+        <div class="card-right">
+          <span class="card-status wip">In documentation</span>
+          <span class="card-arrow">→</span>
+        </div>
+      </a>
+
+      <a class="proj-card" href="#" id="project-03">
+        <div class="card-no">03</div>
+        <div class="card-body">
+          <h3>Project Title Goes Here</h3>
+          <p>Drop this project's one-line summary here.</p>
+          <div class="card-tags">
+            <span class="tag">Add tags</span>
+            <span class="tag">Fabrication</span>
+          </div>
+        </div>
+        <div class="card-right">
+          <span class="card-status wip">In documentation</span>
+          <span class="card-arrow">→</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="padding-top:0;padding-bottom:0;">
+    <div class="titleblock">
+      <div class="tb big"><span class="k">Drawing Title</span><span class="v">Stensrud Engineering</span></div>
+      <div class="tb"><span class="k">Drawn By</span><span class="v">C. Stensrud</span></div>
+      <div class="tb"><span class="k">Scale</span><span class="v">NTS</span></div>
+      <div class="tb"><span class="k">Sheet</span><span class="v">Work Index</span></div>
+      <div class="tb"><span class="k">Rev</span><span class="v">A</span></div>
+    </div>
+    <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:16px 0;">
+      <span class="mono">© <span id="yr"></span> Stensrud Engineering</span>
+      <span class="mono"><a href="index.html">Back to home</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

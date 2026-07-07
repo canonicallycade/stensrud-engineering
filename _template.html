@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  ============================================================================
+  PROJECT PAGE TEMPLATE
+  ----------------------------------------------------------------------------
+  HOW TO USE
+    1. Save a copy of this file as projects/your-project-name.html
+    2. Replace every [BRACKETED] placeholder below
+    3. Add/remove <figure class="shot"> blocks in the gallery to match your photos
+    4. Add/remove .viewport blocks for however many 3D models you have
+    5. Update proj-pagenav links at the bottom to point to the real prev/next projects
+    6. Add a matching card for this project in work.html (and optionally index.html)
+  ============================================================================
+-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>[Project Title] — Stensrud Engineering</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<div class="sheet-frame" aria-hidden="true"><span class="tl"></span><span class="tr"></span><span class="bl"></span><span class="br"></span></div>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="wordmark" href="../index.html">
+      <b>Stensrud Engineering</b>
+      <span class="sub">Mechanical · CAD · Hardware</span>
+    </a>
+    <nav class="links">
+      <a href="../work.html" class="active">Work</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+      <a class="rev" href="../index.html">Rev A</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap crumb">
+  <a href="../work.html">Work</a>
+  <span class="sep">/</span>
+  <span class="here">0[N] — [Project Title]</span>
+</div>
+
+<section>
+  <div class="wrap">
+    <article class="project reveal">
+      <div class="proj-top">
+        <div style="display:flex;gap:22px;align-items:flex-start;">
+          <div class="proj-no">0[N]</div>
+          <div class="proj-titles">
+            <h1>[Project Title]</h1>
+            <div class="proj-tags">
+              <span class="tag">[Tag one]</span>
+              <span class="tag">[Tag two]</span>
+            </div>
+          </div>
+        </div>
+        <!-- use "proj-status" for finished work, "proj-status wip" for in-progress -->
+        <span class="proj-status wip">In documentation</span>
+      </div>
+
+      <div class="proj-body">
+        <div>
+          <p class="lead">[One or two sentences: what this project is and the core problem it solved.]</p>
+          <p>[The design/build process — what you modeled, tested, or iterated, and why it mattered.]</p>
+          <p>[Optional third paragraph — outcome, what you'd change next time, or what's left to finish.]</p>
+        </div>
+
+        <div class="spec">
+          <div class="cap">Title Block — Specification</div>
+          <dl>
+            <div class="row"><dt>Base / Material</dt><dd>[value]</dd></div>
+            <div class="row"><dt>Process</dt><dd>[value]</dd></div>
+            <div class="row"><dt>Tools</dt><dd>[value]</dd></div>
+            <div class="row"><dt>Status</dt><dd>[value]</dd></div>
+          </dl>
+        </div>
+      </div>
+
+      <!-- GALLERY: duplicate a <figure> block per photo. Put images in /assets/img/ -->
+      <div class="gallery">
+        <figure class="shot"><img src="../assets/img/[filename].jpg" alt="[Describe what's in the photo]" loading="lazy"><figcaption><span>Fig 1 — [Caption]</span><span>IMG.01</span></figcaption></figure>
+        <figure class="shot"><img src="../assets/img/[filename].jpg" alt="[Describe what's in the photo]" loading="lazy"><figcaption><span>Fig 2 — [Caption]</span><span>IMG.02</span></figcaption></figure>
+      </div>
+
+      <!-- 3D MODELS: duplicate a .viewport block per model. Replace the placeholder
+           contents with a <model-viewer>, Sketchfab, or Spline embed. -->
+      <div class="viewport-band">
+        <div class="viewport-grid">
+          <div class="viewport" role="img" aria-label="3D model viewport placeholder">
+            <span class="vp-corner c1"></span><span class="vp-corner c2"></span><span class="vp-corner c3"></span>
+            <span class="vp-num">MODEL · 3D-0[N]</span>
+            <div class="reticle"></div>
+            <div class="vp-title">[Model Name]</div>
+            <div class="vp-sub">Embed the .stl / .glb export here</div>
+            <div class="axis"><b>Z</b> ↑ &nbsp; <b>Y</b> ↗ &nbsp; <b>X</b> →</div>
+          </div>
+        </div>
+      </div>
+
+      <nav class="proj-pagenav">
+        <a class="prev" href="[previous-project].html">
+          <span class="pn-label">← Previous</span>
+          <span class="pn-title">[Previous Project Title]</span>
+        </a>
+        <a class="next" href="[next-project].html">
+          <span class="pn-label">Next project →</span>
+          <span class="pn-title">[Next Project Title]</span>
+        </a>
+      </nav>
+    </article>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="padding-top:0;padding-bottom:0;">
+    <div class="titleblock">
+      <div class="tb big"><span class="k">Drawing Title</span><span class="v">[Project Title]</span></div>
+      <div class="tb"><span class="k">Drawn By</span><span class="v">C. Stensrud</span></div>
+      <div class="tb"><span class="k">Scale</span><span class="v">NTS</span></div>
+      <div class="tb"><span class="k">Sheet</span><span class="v">0[N] / [total]</span></div>
+      <div class="tb"><span class="k">Rev</span><span class="v">A</span></div>
+    </div>
+    <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:16px 0;">
+      <span class="mono">© <span id="yr"></span> Stensrud Engineering</span>
+      <span class="mono"><a href="../index.html">Back to home</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
