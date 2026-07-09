@@ -54,8 +54,8 @@
 
       <div class="proj-body">
         <div>
-          <p class="lead">A decommissioned 10ZiG 6000q thin client rebuilt into a fanless home router running OPNsense with AdGuard Home. Adding a second network interface broke the stock rear port layout, so the rear I/O plate became its own design problem.</p>
-          <p>I modeled a replacement rear I/O plate in OpenSCAD and iterated it on the printer — the row of prototypes in the photos is the cutout geometry and mounting tabs being dialed in against caliper-measured dimensions until the ports seated cleanly. Internal storage was solved with an mSATA-to-adapter bodge carrying a KingSpec SSD, and the WAN interface came from an added M.2 A+E NIC alongside the board's onboard Intel controller.</p>
+          <p class="lead">A decommissioned 10ZiG 6000q thin client rebuilt into a fanless home router running OPNsense with AdGuard Home. Buying storage is expensive these days, so in order to get this project started I turned the MSATA port into a SATA data port using an adapter card. Tapping the USB 5V solder point allows the KingSpec SSD to boot. Adding a second network interface broke the stock rear port layout, so the rear I/O plate became its own design problem.</p>
+          <p>I modeled a replacement rear I/O plate in Inventor and iterated it on the printer — the row of prototypes in the photos is the cutout geometry and mounting tabs being dialed in against caliper-measured dimensions until the ports seated cleanly. The WAN interface came from an added M.2 A+E NIC alongside the board's onboard Intel controller.</p>
           <p>The result is a silent, low-power router that looks intentional rather than hacked together — the enclosure closes flush with a part I designed to the tenth of a millimeter.</p>
         </div>
 
@@ -69,7 +69,7 @@
             <div class="row"><dt>LAN NIC</dt><dd>Intel I211</dd></div>
             <div class="row"><dt>Storage</dt><dd>KingSpec mSATA SSD (adapter)</dd></div>
             <div class="row"><dt>Enclosure</dt><dd>Custom rear I/O plate</dd></div>
-            <div class="row"><dt>Process</dt><dd>OpenSCAD · FDM · Bambu P1S</dd></div>
+            <div class="row"><dt>Process</dt><dd>Inventor · FDM · Bambu P1S</dd></div>
             <div class="row"><dt>Metrology</dt><dd>Digital calipers</dd></div>
           </dl>
         </div>
@@ -90,7 +90,7 @@
             <span class="vp-num">MODEL · 3D-01</span>
             <div class="reticle"></div>
             <div class="vp-title">Rear I/O Plate</div>
-            <div class="vp-sub">Embed the OpenSCAD export (.stl / .glb) here</div>
+            <div class="vp-sub">Embed the Inventor export (.stl / .glb) here</div>
             <div class="axis"><b>Z</b> ↑ &nbsp; <b>Y</b> ↗ &nbsp; <b>X</b> →</div>
             <!--
               FRAMER / WEB: replace this block's contents with a 3D embed. Example using
