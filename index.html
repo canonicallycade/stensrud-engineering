@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  ============================================================================
+  STENSRUD ENGINEERING — Home
+  ----------------------------------------------------------------------------
+  SITE MAP
+    index.html                          <- this file
+    work.html                           <- index of all projects
+    projects/thin-client-router.html    <- project 01 detail page
+    projects/_template.html             <- copy this to add a new project
+    styles.css                          <- shared design system, edit once
+
+  ADDING A NEW PROJECT
+    1. Duplicate projects/_template.html, rename it (e.g. jackson-guitar-mod.html)
+    2. Fill in its content and photos
+    3. Add one card for it in work.html's <div class="proj-list">
+    That's the whole process — no other file needs to change.
+
+  FRAMER
+    Same notes as before: paste each page's <body> content into a Framer page,
+    or use one Embed component per page. Add Archivo / IBM Plex Sans /
+    IBM Plex Mono in Framer's font settings to match styles.css exactly.
+  ============================================================================
+-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Stensrud Engineering — Mechanical Engineering Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="sheet-frame" aria-hidden="true"><span class="tl"></span><span class="tr"></span><span class="bl"></span><span class="br"></span></div>
+
+<!-- ================= NAV ================= -->
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="wordmark" href="index.html">
+      <b>Stensrud Engineering</b>
+      <span class="sub">Mechanical · CAD · Hardware</span>
+    </a>
+    <nav class="links">
+      <a href="work.html">Work</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+      <a class="rev" href="index.html">Rev A</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">
+      <span class="tag">Portfolio · Sheet 01</span>
+      <span class="mono">Mechanical Engineering</span>
+    </div>
+    <h1 class="hero-name">Stensrud<span class="l2">Engineering</span></h1>
+
+    <p class="hero-lead">
+      <span class="drop">I</span>'ve been taking things apart since before I understood what was inside them. Prying open computers to see how they worked turned into building them, and then into modeling the parts I couldn't buy. Somewhere between a childhood spent inside a desktop tower and a CAD window open on a second monitor, mechanical engineering stopped being a subject and became the way I think — designing hardware that has to physically fit, power on, and survive being used, where a tenth of a millimeter decides whether a part seats or goes back on the print bed.
+    </p>
+
+    <div class="hero-meta">
+      <div><span class="mono">Discipline</span><b>Mechanical / Hardware</b></div>
+      <div><span class="mono">Toolset</span><b>OpenSCAD · FDM · Metrology</b></div>
+      <div><span class="mono">Based</span><b>Georgia, USA</b></div>
+    </div>
+
+    <div class="hero-dim" aria-hidden="true">
+      <div class="dim">
+        <span class="cap"></span>
+        <span class="rule arrow-l arrow-r"></span>
+        <span class="val">CAD → PART · SINCE DAY ONE</span>
+        <span class="rule arrow-l arrow-r"></span>
+        <span class="cap"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= WORK TEASER ================= -->
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Selected Work</h2>
+      <div class="idx">INDEX · 3 SHEETS<br>SCALE — NTS</div>
+    </div>
+
+    <div class="proj-list reveal">
+      <a class="proj-card" href="thin-client-router.html">
+        <div class="card-no">01</div>
+        <div class="card-body">
+          <h3>Thin-Client → OPNsense Router</h3>
+          <p>A decommissioned 10ZiG thin client rebuilt into a fanless router — custom rear I/O plate designed and printed to fit.</p>
+          <div class="card-tags">
+            <span class="tag">Hardware conversion</span>
+            <span class="tag">Enclosure design</span>
+            <span class="tag">3D printing</span>
+          </div>
+        </div>
+        <div class="card-right">
+          <span class="card-status">Built · Rev C</span>
+          <span class="card-arrow">→</span>
+        </div>
+      </a>
+
+      <a class="proj-card" href="work.html#project-02">
+        <div class="card-no">02</div>
+        <div class="card-body">
+          <h3>Project Title Goes Here</h3>
+          <p>Overview of the second project — the problem, the constraint, the outcome.</p>
+          <div class="card-tags">
+            <span class="tag">Add tags</span>
+          </div>
+        </div>
+        <div class="card-right">
+          <span class="card-status wip">In documentation</span>
+          <span class="card-arrow">→</span>
+        </div>
+      </a>
+    </div>
+
+    <p style="margin-top:28px;"><a href="work.html" class="mono" style="border-bottom:1px solid var(--line-strong);padding-bottom:2px;">View all work →</a></p>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>About</h2>
+      <div class="idx">DRAWN BY<br>C. STENSRUD</div>
+    </div>
+    <div class="about-grid reveal">
+      <div>
+        <p>I'm a mechanical engineering student who never really left the workbench. The habit started early — computers were the first machines I was allowed to break, and CAD was how I stopped needing to buy the parts I wanted.</p>
+        <p>Most of what I build lives at the intersection of hardware and software: repurposing decommissioned machines, designing enclosures and adapters that have to hold real tolerances, and printing the pieces that make a hack look like a product. I'm comfortable moving from a caliper reading to an OpenSCAD model to a finished print, and just as comfortable inside a Linux terminal or a laptop's board-level repair.</p>
+        <p>I care about the details that don't show up in a render — the fitment, the thermals, the one dimension that decides whether a design is finished or just close.</p>
+      </div>
+      <div class="facts">
+        <div class="row"><span class="k">Focus</span><span class="v">Mechanical / Hardware</span></div>
+        <div class="row"><span class="k">CAD</span><span class="v">OpenSCAD</span></div>
+        <div class="row"><span class="k">Fabrication</span><span class="v">FDM · Bambu P1S</span></div>
+        <div class="row"><span class="k">Measure</span><span class="v">Digital calipers</span></div>
+        <div class="row"><span class="k">Also</span><span class="v">Linux · PCB repair</span></div>
+        <div class="row"><span class="k">Location</span><span class="v">Georgia, USA</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="contact">
+  <div class="wrap contact-in reveal">
+    <div>
+      <h2>Let's build<br>something.</h2>
+      <p style="margin:18px 0 0;max-width:44ch;color:var(--ink-soft);">Open to mechanical design, prototyping, and hardware projects. Reach out — <a class="mail" href="mailto:hello@stensrud.engineering">hello@stensrud.engineering</a></p>
+    </div>
+    <div class="cbtns">
+      <a class="cbtn" href="mailto:hello@stensrud.engineering">Email</a>
+      <a class="cbtn" href="#">GitHub</a>
+      <a class="cbtn" href="#">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER TITLE BLOCK ================= -->
+<footer>
+  <div class="wrap" style="padding-top:0;padding-bottom:0;">
+    <div class="titleblock">
+      <div class="tb big"><span class="k">Drawing Title</span><span class="v">Stensrud Engineering</span></div>
+      <div class="tb"><span class="k">Drawn By</span><span class="v">C. Stensrud</span></div>
+      <div class="tb"><span class="k">Scale</span><span class="v">NTS</span></div>
+      <div class="tb"><span class="k">Sheet</span><span class="v">Home</span></div>
+      <div class="tb"><span class="k">Rev</span><span class="v">A</span></div>
+    </div>
+    <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:16px 0;">
+      <span class="mono">© <span id="yr"></span> Stensrud Engineering</span>
+      <span class="mono">Mechanical Engineering Portfolio</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
