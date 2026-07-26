@@ -84,33 +84,16 @@
 
       <div class="viewport-band">
         <div class="viewport-grid">
-          <!-- 3D SLOT 1 — drop a model-viewer / Sketchfab / Spline embed here -->
-          <div class="viewport" role="img" aria-label="3D model viewport placeholder for the rear I/O plate">
+          <!-- 3D SLOT 1 — live model: 10ZiG rear I/O backplate (10ZiG_backplate_V7.stl, converted to .glb) -->
+          <div class="viewport" style="padding:0;">
             <span class="vp-corner c1"></span><span class="vp-corner c2"></span><span class="vp-corner c3"></span>
             <span class="vp-num">MODEL · 3D-01</span>
-            <div class="reticle"></div>
-            <div class="vp-title">Rear I/O Plate</div>
-            <div class="vp-sub">Embed the Inventor export (.stl / .glb) here</div>
-            <div class="axis"><b>Z</b> ↑ &nbsp; <b>Y</b> ↗ &nbsp; <b>X</b> →</div>
-            <!--
-              FRAMER / WEB: replace this block's contents with a 3D embed. Example using
-              Google's model-viewer (add the script in <head>):
-              <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-              <model-viewer src="io-plate.glb" camera-controls auto-rotate
-                            style="width:100%;height:100%" exposure="1"></model-viewer>
-            -->
+            <model-viewer src="io-plate.glb" alt="3D model of the custom rear I/O backplate for the 10ZiG thin client router"
+                          camera-controls auto-rotate auto-rotate-delay="1200" rotation-per-second="18deg"
+                          shadow-intensity="1" exposure="1" camera-orbit="35deg 70deg auto"
+                          style="width:100%;height:100%;--poster-color:transparent;"></model-viewer>
+            <div class="vp-sub" style="position:absolute;bottom:12px;right:12px;left:auto;text-align:right;background:rgba(240,241,237,.8);padding:2px 6px;">10ZiG_backplate_V7 · drag to rotate</div>
           </div>
-          <!-- 3D SLOT 2 -->
-          <div class="viewport" role="img" aria-label="3D model viewport placeholder for the full assembly">
-            <span class="vp-corner c1"></span><span class="vp-corner c2"></span><span class="vp-corner c3"></span>
-            <span class="vp-num">MODEL · 3D-02</span>
-            <div class="reticle"></div>
-            <div class="vp-title">Full Assembly</div>
-            <div class="vp-sub">Embed the enclosure + board assembly here</div>
-            <div class="axis"><b>Z</b> ↑ &nbsp; <b>Y</b> ↗ &nbsp; <b>X</b> →</div>
-          </div>
-        </div>
-      </div>
 
       <nav class="proj-pagenav">
         <a class="prev" href="work.html">
